@@ -2036,6 +2036,30 @@
               ]
             }
           ]
+        },
+
+
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "g",
+            "modifiers": {
+              "mandatory": [
+                "option"
+              ],
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "spacebar",
+              "modifiers": [
+                "command"
+              ]
+            }
+          ]
         }
 
       ]
