@@ -404,6 +404,29 @@
         {
           "type": "basic",
           "from": {
+            "key_code": "delete_or_backspace",
+            "modifiers": {
+              "mandatory": [
+                "option"
+              ],
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "grave_accent_and_tilde",
+              "modifiers": [
+                "left_command"
+              ]
+            }
+          ]
+        },
+
+        {
+          "type": "basic",
+          "from": {
             "key_code": "spacebar",
             "modifiers": {
               "mandatory": [
@@ -423,6 +446,7 @@
             }
           ]
         }
+
       ]
     },
 
@@ -1976,7 +2000,6 @@
               "bundle_identifiers": [
                 "^com\\.apple\\.Terminal$",
                 "^com\\.apple\\.Notes$"
-
               ]
             }
           ]
@@ -2018,7 +2041,7 @@
     },
 
     {
-      "description": "PC-Style Undo/Redo, Select all, Save, Copy/Paste, Bold",
+      "description": "PC-Style Undo/Redo, Select all, Save, Copy/Paste, Bold, Italics, Underline",
       "manipulators": [
 
         {
@@ -2161,6 +2184,68 @@
           "to": [
             {
               "key_code": "b",
+              "modifiers": [
+                "left_command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.apple\\.Terminal$"
+              ]
+            }
+          ]
+        },
+
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "i",
+            "modifiers": {
+              "mandatory": [
+                "control"
+              ],
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "i",
+              "modifiers": [
+                "left_command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.apple\\.Terminal$"
+              ]
+            }
+          ]
+        },
+
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "u",
+            "modifiers": {
+              "mandatory": [
+                "control"
+              ],
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "u",
               "modifiers": [
                 "left_command"
               ]
@@ -2330,36 +2415,27 @@
     },
 
     {
-      "description": "Alt hold",
+      "description": "TMUX copy mode",
       "manipulators": [
-
         {
           "type": "basic",
           "from": {
-            "key_code": "left_option",
+            "key_code": "r",
             "modifiers": {
+              "mandatory": [
+                "option"
+              ],
               "optional": [
                 "any"
               ]
             }
           },
-          "parameters": {
-              "basic.to_if_alone_timeout_milliseconds": 500,
-              "basic.to_if_held_down_threshold_milliseconds": 500
-          },
-          "to_if_alone": [
+          "to": [
             {
-              "key_code": "left_option",
-              "modifiers": {
-                "optional": [
-                  "any"
-                ]
-              }
-            }
-          ],
-          "to_if_held_down": [
-            {
-              "key_code": "fn"
+              "key_code": "r",
+              "modifiers": [
+                "left_command"
+              ]
             }
           ],
           "conditions": [
@@ -2367,91 +2443,6 @@
               "type": "frontmost_application_if",
               "bundle_identifiers": [
                 "^com\\.apple\\.Terminal$"
-              ]
-            }
-          ]
-        }
-
-      ]
-    },
-
-
-
-    {
-      "description": "PC-Style Copy (Ctrl+Insert) for JIS/PC keyboard",
-      "manipulators": [
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "insert",
-            "modifiers": {
-              "mandatory": [
-                "control"
-              ],
-              "optional": [
-                "any"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "c",
-              "modifiers": [
-                "left_command"
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "description": "PC-Style Paste (Shift+Insert) for JIS/PC keyboard",
-      "manipulators": [
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "insert",
-            "modifiers": {
-              "mandatory": [
-                "shift"
-              ],
-              "optional": [
-                "any"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "v",
-              "modifiers": [
-                "left_command"
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "description": "PC-Style Paste(Shift+Fn) for ANSI keyboard",
-      "manipulators": [
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "fn",
-            "modifiers": {
-              "mandatory": [
-                "shift"
-              ],
-              "optional": [
-                "any"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "v",
-              "modifiers": [
-                "left_command"
               ]
             }
           ]
