@@ -1,6 +1,7 @@
 {
   "title": "sjhwang mbp",
   "rules": [
+
     {
       "description": "PC-Style Home/End",
       "manipulators": [
@@ -399,7 +400,7 @@
     },
 
     {
-      "description": "Option/alt+Space as Switch Application (Command+Tab)",
+      "description": "Option+Space/Tilde as Switch Application",
       "manipulators": [
         {
           "type": "basic",
@@ -2448,7 +2449,82 @@
           ]
         }
       ]
+    },
+
+
+    {
+      "description": "Firefox restore tab and window",
+      "manipulators": [
+
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "t",
+            "modifiers": {
+              "mandatory": [
+                "control",
+                "shift"
+              ],
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "t",
+              "modifiers": [
+                "command",
+                "shift"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^org\\.mozilla\\.firefox$"
+              ]
+            }
+          ]
+        },
+
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "n",
+            "modifiers": {
+              "mandatory": [
+                "control",
+                "shift"
+              ],
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "n",
+              "modifiers": [
+                "command",
+                "shift"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^org\\.mozilla\\.firefox$"
+              ]
+            }
+          ]
+        }
+
+      ]
     }
 
   ]
 }
+
