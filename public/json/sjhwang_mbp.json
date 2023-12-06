@@ -2547,6 +2547,36 @@
         }
 
       ]
+    },
+
+    {
+      "description": "Swap left_command and left_option",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "left_command"
+          },
+          "to": [
+            {
+              "key_code": "left_option"
+            }
+          ]
+        },
+
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "left_option"
+          },
+          "to": [
+            {
+              "key_code": "left_command"
+            }
+          ]
+        }
+
+      ]
     }
 
   ]
