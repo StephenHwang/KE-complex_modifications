@@ -2561,6 +2561,16 @@
             {
               "key_code": "left_option"
             }
+          ],
+          "conditions": [
+            {
+              "type": "type_if",
+              "identifiers": [
+                {
+                  "is_built_in_keyboard": true
+                }
+              ]
+            }
           ]
         },
 
@@ -2573,6 +2583,16 @@
             {
               "key_code": "left_command"
             }
+          ],
+          "conditions": [
+            {
+              "type": "type_if",
+              "identifiers": [
+                {
+                  "is_built_in_keyboard": true
+                }
+              ]
+            }
           ]
         }
 
@@ -2581,4 +2601,3 @@
 
   ]
 }
-
