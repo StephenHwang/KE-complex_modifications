@@ -72,7 +72,8 @@
                 "^org\\.gnu\\.Emacs$",
                 "^org\\.gnu\\.AquamacsEmacs$",
                 "^org\\.gnu\\.Aquamacs$",
-                "^org\\.pqrs\\.unknownapp\\.conkeror$"
+                "^org\\.pqrs\\.unknownapp\\.conkeror$",
+                "^com\\.apple\\.Notes$"
               ]
             }
           ]
@@ -106,7 +107,8 @@
                 "^com\\.microsoft\\.edgemac",
                 "^com\\.google\\.Chrome$",
                 "^com\\.brave\\.Browser$",
-                "^com\\.apple\\.Safari$"
+                "^com\\.apple\\.Safari$",
+                "^com\\.apple\\.Notes$"
               ]
             }
           ]
@@ -173,11 +175,13 @@
                 "^org\\.gnu\\.Emacs$",
                 "^org\\.gnu\\.AquamacsEmacs$",
                 "^org\\.gnu\\.Aquamacs$",
-                "^org\\.pqrs\\.unknownapp\\.conkeror$"
+                "^org\\.pqrs\\.unknownapp\\.conkeror$",
+                "^com\\.apple\\.Notes$"
               ]
             }
           ]
         },
+
         {
           "type": "basic",
           "from": {
@@ -245,11 +249,13 @@
                 "^org\\.gnu\\.Emacs$",
                 "^org\\.gnu\\.AquamacsEmacs$",
                 "^org\\.gnu\\.Aquamacs$",
-                "^org\\.pqrs\\.unknownapp\\.conkeror$"
+                "^org\\.pqrs\\.unknownapp\\.conkeror$",
+                "^com\\.apple\\.Notes$"
               ]
             }
           ]
         },
+
         {
           "type": "basic",
           "from": {
@@ -279,11 +285,13 @@
                 "^com\\.microsoft\\.edgemac",
                 "^com\\.google\\.Chrome$",
                 "^com\\.brave\\.Browser$",
-                "^com\\.apple\\.Safari$"
+                "^com\\.apple\\.Safari$",
+                "^com\\.apple\\.Notes$"
               ]
             }
           ]
         },
+
         {
           "type": "basic",
           "from": {
@@ -346,11 +354,14 @@
                 "^org\\.gnu\\.Emacs$",
                 "^org\\.gnu\\.AquamacsEmacs$",
                 "^org\\.gnu\\.Aquamacs$",
-                "^org\\.pqrs\\.unknownapp\\.conkeror$"
+                "^org\\.pqrs\\.unknownapp\\.conkeror$",
+                "^com\\.apple\\.Notes$"
               ]
             }
           ]
         }
+
+
       ]
     },
 
@@ -1001,6 +1012,7 @@
             }
           ]
         },
+
         {
           "type": "basic",
           "conditions": [
@@ -1008,6 +1020,12 @@
               "name": "caps_lock pressed",
               "type": "variable_if",
               "value": 1
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.apple\\.Notes$"
+              ]
             }
           ],
           "from": {
@@ -1031,6 +1049,46 @@
               "name": "caps_lock pressed",
               "type": "variable_if",
               "value": 1
+            },
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^com\\.apple\\.Notes$"
+              ]
+            }
+          ],
+          "from": {
+            "key_code": "y",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "a",
+              "modifiers": [
+                "left_control"
+              ]
+            }
+          ]
+        },
+
+
+        {
+          "type": "basic",
+          "conditions": [
+            {
+              "name": "caps_lock pressed",
+              "type": "variable_if",
+              "value": 1
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.apple\\.Notes$"
+              ]
             }
           ],
           "from": {
@@ -1047,6 +1105,40 @@
             }
           ]
         },
+        {
+          "type": "basic",
+          "conditions": [
+            {
+              "name": "caps_lock pressed",
+              "type": "variable_if",
+              "value": 1
+            },
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^com\\.apple\\.Notes$"
+              ]
+            }
+          ],
+          "from": {
+            "key_code": "u",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "e",
+              "modifiers": [
+                "left_control"
+              ]
+            }
+          ]
+        },
+
+
         {
           "type": "basic",
           "conditions": [
