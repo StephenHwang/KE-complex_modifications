@@ -405,7 +405,17 @@
               "left_command",
               "left_shift"
             ]
-          }
+          },
+          "conditions": [
+            {
+              "type": "type_if",
+              "identifiers": [
+                {
+                  "is_built_in_keyboard": true
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -431,6 +441,16 @@
               "key_code": "grave_accent_and_tilde",
               "modifiers": [
                 "left_command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "type_if",
+              "identifiers": [
+                {
+                  "is_built_in_keyboard": true
+                }
               ]
             }
           ]
@@ -2034,10 +2054,7 @@
           },
           "to": [
             {
-              "key_code": "f11",
-              "modifiers": [
-                "fn"
-              ]
+              "key_code": "escape"
             }
           ]
         },
@@ -2057,11 +2074,7 @@
           },
           "to": [
             {
-              "key_code": "k",
-              "modifiers": [
-                "command",
-                "control"
-              ]
+              "key_code": "f15"
             }
           ]
         },
@@ -2081,19 +2094,7 @@
           },
           "to": [
             {
-              "key_code": "h",
-              "modifiers": [
-                "command"
-              ]
-            }
-          ],
-          "conditions": [
-            {
-              "type": "frontmost_application_if",
-              "bundle_identifiers": [
-                "^com\\.apple\\.Terminal$",
-                "^com\\.apple\\.Notes$"
-              ]
+              "key_code": "f13"
             }
           ]
         },
@@ -2113,19 +2114,7 @@
           },
           "to": [
             {
-              "key_code": "l",
-              "modifiers": [
-                "command"
-              ]
-            }
-          ],
-          "conditions": [
-            {
-              "type": "frontmost_application_if",
-              "bundle_identifiers": [
-                "^com\\.apple\\.Terminal$",
-                "^com\\.apple\\.Notes$"
-              ]
+              "key_code": "f16"
             }
           ]
         },
@@ -2184,6 +2173,14 @@
           ],
           "conditions": [
             {
+              "type": "type_if",
+              "identifiers": [
+                {
+                  "is_built_in_keyboard": true
+                }
+              ]
+            },
+            {
               "type": "frontmost_application_unless",
               "bundle_identifiers": [
                 "^com\\.apple\\.Terminal$"
@@ -2214,6 +2211,14 @@
             }
           ],
           "conditions": [
+            {
+              "type": "type_if",
+              "identifiers": [
+                {
+                  "is_built_in_keyboard": true
+                }
+              ]
+            },
             {
               "type": "frontmost_application_unless",
               "bundle_identifiers": [
@@ -2246,6 +2251,14 @@
           ],
           "conditions": [
             {
+              "type": "type_if",
+              "identifiers": [
+                {
+                  "is_built_in_keyboard": true
+                }
+              ]
+            },
+            {
               "type": "frontmost_application_unless",
               "bundle_identifiers": [
                 "^com\\.apple\\.Terminal$"
@@ -2276,6 +2289,14 @@
             }
           ],
           "conditions": [
+            {
+              "type": "type_if",
+              "identifiers": [
+                {
+                  "is_built_in_keyboard": true
+                }
+              ]
+            },
             {
               "type": "frontmost_application_unless",
               "bundle_identifiers": [
@@ -2308,6 +2329,14 @@
           ],
           "conditions": [
             {
+              "type": "type_if",
+              "identifiers": [
+                {
+                  "is_built_in_keyboard": true
+                }
+              ]
+            },
+            {
               "type": "frontmost_application_unless",
               "bundle_identifiers": [
                 "^com\\.apple\\.Terminal$"
@@ -2338,6 +2367,14 @@
             }
           ],
           "conditions": [
+            {
+              "type": "type_if",
+              "identifiers": [
+                {
+                  "is_built_in_keyboard": true
+                }
+              ]
+            },
             {
               "type": "frontmost_application_unless",
               "bundle_identifiers": [
@@ -2370,6 +2407,14 @@
           ],
           "conditions": [
             {
+              "type": "type_if",
+              "identifiers": [
+                {
+                  "is_built_in_keyboard": true
+                }
+              ]
+            },
+            {
               "type": "frontmost_application_unless",
               "bundle_identifiers": [
                 "^com\\.apple\\.Terminal$"
@@ -2401,6 +2446,14 @@
           ],
           "conditions": [
             {
+              "type": "type_if",
+              "identifiers": [
+                {
+                  "is_built_in_keyboard": true
+                }
+              ]
+            },
+            {
               "type": "frontmost_application_unless",
               "bundle_identifiers": [
                 "^com\\.apple\\.Terminal$"
@@ -2430,6 +2483,14 @@
             }
           ],
           "conditions": [
+            {
+              "type": "type_if",
+              "identifiers": [
+                {
+                  "is_built_in_keyboard": true
+                }
+              ]
+            },
             {
               "type": "frontmost_application_unless",
               "bundle_identifiers": [
@@ -2461,6 +2522,14 @@
           ],
           "conditions": [
             {
+              "type": "type_if",
+              "identifiers": [
+                {
+                  "is_built_in_keyboard": true
+                }
+              ]
+            },
+            {
               "type": "frontmost_application_unless",
               "bundle_identifiers": [
                 "^com\\.apple\\.Terminal$"
@@ -2491,6 +2560,14 @@
           ],
           "conditions": [
             {
+              "type": "type_if",
+              "identifiers": [
+                {
+                  "is_built_in_keyboard": true
+                }
+              ]
+            },
+            {
               "type": "frontmost_application_if",
               "bundle_identifiers": [
                 "^com\\.apple\\.Terminal$"
@@ -2520,6 +2597,14 @@
           ],
           "conditions": [
             {
+              "type": "type_if",
+              "identifiers": [
+                {
+                  "is_built_in_keyboard": true
+                }
+              ]
+            },
+            {
               "type": "frontmost_application_if",
               "bundle_identifiers": [
                 "^com\\.apple\\.Terminal$"
@@ -2534,6 +2619,7 @@
     {
       "description": "TMUX copy mode",
       "manipulators": [
+
         {
           "type": "basic",
           "from": {
@@ -2557,6 +2643,14 @@
           ],
           "conditions": [
             {
+              "type": "type_if",
+              "identifiers": [
+                {
+                  "is_built_in_keyboard": true
+                }
+              ]
+            },
+            {
               "type": "frontmost_application_if",
               "bundle_identifiers": [
                 "^com\\.apple\\.Terminal$"
@@ -2564,6 +2658,7 @@
             }
           ]
         }
+
       ]
     },
 
@@ -2690,6 +2785,7 @@
 
       ]
     }
+
 
   ]
 }
